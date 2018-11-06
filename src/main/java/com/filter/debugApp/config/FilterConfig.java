@@ -16,7 +16,7 @@ public class FilterConfig {
         return registrationBean;
     }
 
-    @Bean
+    //    @Bean
     public FilterRegistrationBean filterRegistrationExceptionHandler(){
         FilterRegistrationBean registrationBean = new FilterRegistrationBean();
         registrationBean.setFilter(new ExceptionHandlerFilter());
