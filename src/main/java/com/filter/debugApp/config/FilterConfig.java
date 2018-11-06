@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Configuration;
 public class FilterConfig {
 
     @Bean
-    public FilterRegistrationBean filterRegistrationExceptionProneFilter(){
+    public FilterRegistrationBean filterRegistrationExceptionProneFilter() {
         FilterRegistrationBean registrationBean = new FilterRegistrationBean();
         registrationBean.setFilter(new ExcceptionProneFilter());
         registrationBean.setOrder(FilterRegistrationBean.HIGHEST_PRECEDENCE + 1);
@@ -16,8 +16,8 @@ public class FilterConfig {
         return registrationBean;
     }
 
-    //    @Bean
-    public FilterRegistrationBean filterRegistrationExceptionHandler(){
+    @Bean
+    public FilterRegistrationBean filterRegistrationExceptionHandler() {
         FilterRegistrationBean registrationBean = new FilterRegistrationBean();
         registrationBean.setFilter(new ExceptionHandlerFilter());
         registrationBean.setOrder(FilterRegistrationBean.HIGHEST_PRECEDENCE);
